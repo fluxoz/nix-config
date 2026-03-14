@@ -7,12 +7,10 @@
     ../common/optional/bluetooth.nix
     ../common/optional/xbox-controller.nix
     ../common/optional/desktop-environments/plasma.nix
-    # ../common/optional/desktop-environments/niri.nix
     ../common/optional/audio.nix
     ../common/optional/fonts.nix
     ../common/optional/nvidia.nix
     ../common/optional/x11.nix
-    ../common/optional/tailscale.nix
     ../common/optional/vmware.nix
     ../common/optional/podman.nix
     ../common/optional/local_ca.nix

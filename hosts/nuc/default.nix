@@ -211,10 +211,6 @@ in
     '';
   };
 
-  services.tailscale = {
-    enable = true;
-  };
-
   services.starfin = {
     enable = true;
     videoLibraryPath = "/storage/backup/media";
@@ -379,6 +375,7 @@ in
     openFirewall = true;
     dataDir = "/storage/jellyfin/data";
     configDir = "/storage/jellyfin/config";
+    cacheDir = "/storage/jellyfin/cache";
   };
 
   # programs.home-manager.enable = true;
