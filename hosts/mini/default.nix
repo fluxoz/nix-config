@@ -17,10 +17,10 @@ in
   
   sops = {
     secrets = {
-      "passwords/nuc/murphy" = {
+      "passwords/mini/murphy" = {
         neededForUsers = true;
       };
-      "passwords/nuc/root" = {
+      "passwords/mini/root" = {
         neededForUsers = true;
       };
     };
