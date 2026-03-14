@@ -419,11 +419,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1773520855,
-        "narHash": "sha256-M/jH3NAgudGT2kY9lyqzuMPAoOfaO9GZs3WOglGf4uc=",
+        "lastModified": 1773528165,
+        "narHash": "sha256-eaanJ1ZuysvPYmQRbofU5Gb+jPEh2FcZ0YW+SATVi68=",
         "ref": "refs/heads/master",
-        "rev": "635e6143f8b1e0698732f35fb429c84447d7b47c",
-        "revCount": 49,
+        "rev": "e90bafb39994b65c34b567ee0ad3025d5ae873a7",
+        "revCount": 58,
         "type": "git",
         "url": "ssh://git@github.com/fluxoz/starfin.git"
       },

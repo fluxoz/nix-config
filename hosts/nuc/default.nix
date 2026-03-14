@@ -293,6 +293,9 @@ in
         };
       };
       "jellyfin.nuc.lan" = {
+        forceSSL = true;
+        sslCertificate = "${self}/shared/local_tls/lan.pem";
+        sslCertificateKey = config.sops.secrets."lan-key".path;
         locations."/" = {
           extraConfig = ''
             proxy_pass http://127.0.0.1:8096;

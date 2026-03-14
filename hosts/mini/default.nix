@@ -37,14 +37,14 @@ in
     };
     users = { 
       root = {
-        hashedPasswordFile = config.sops.secrets."passwords/nuc/root".path;
+        hashedPasswordFile = config.sops.secrets."passwords/mini/root".path;
         openssh.authorizedKeys.keyFiles = [ 
           ../../shared/authorized_keys
         ];
       };
       murphy = {
         isNormalUser = true;
-        hashedPasswordFile = config.sops.secrets."passwords/nuc/murphy".path;
+        hashedPasswordFile = config.sops.secrets."passwords/mini/murphy".path;
         extraGroups = [ "wheel" "docker" "storage" ]; # Add user to sudo group
         openssh.authorizedKeys.keyFiles = [ 
           ../../shared/authorized_keys
