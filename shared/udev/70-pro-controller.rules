@@ -1,0 +1,2 @@
+KERNEL=="hidraw*", ATTRS{idVendor}=="057e", MODE="2009", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}=="057e", ATTR{idProduct}=="2009", GROUP="plugdev"
