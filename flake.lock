@@ -379,10 +379,10 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1773462178,
-        "narHash": "sha256-B+ydYtFFHT7jRSchyXtSO6L2jvMas7cfLVv9SR7p79U=",
+        "lastModified": 1773530897,
+        "narHash": "sha256-8YtLHUmPly+BlRmm0RM0QtJ+I0jqQiV4QnigF7X7gJ8=",
         "ref": "refs/heads/master",
-        "rev": "8eb7f3836053976155c4157392f25ebff748612a",
+        "rev": "fbe9d5df55d25261c6fbee1bf075ed32476f7c99",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/fluxoz/nix-secrets.git"
