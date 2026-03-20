@@ -57,9 +57,9 @@ in
 
   # ===== NETWORKING =====
   networking = {
-    defaultGateway = "192.168.1.1";
+    defaultGateway = "192.168.2.1";
     nameservers = [
-      "192.168.1.5"
+      "8.8.8.8"
       "1.1.1.1"
     ];
     hostName = "mini";
@@ -68,7 +68,7 @@ in
     networkmanager.enable = false;
     interfaces.end0 = {
       ipv4.addresses = [{
-        address = "192.168.1.10";
+        address = "192.168.2.2";
         prefixLength = 24;
       }];
     };
@@ -79,6 +79,11 @@ in
         8080    # http
       ];
     };
+  };
+
+  services.zeroclaw = {
+    enable = true;
+    provider = "ollama";
   };
 
   services.tailscale = {

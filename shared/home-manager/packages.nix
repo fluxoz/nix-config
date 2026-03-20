@@ -1,6 +1,6 @@
 { config, lib, pkgs, nixvim, ... }:
 let
-  nvim = nixvim.packages.x86_64-linux.default;
+  nvim = nixvim.packages.${pkgs.system}.default;
 in
   {
     options.my-packages = {
@@ -76,6 +76,7 @@ in
           auctex
           caligula # utility for disk imaging
           chromium
+          discord
           ffmpeg-full
           firefox
           freecad

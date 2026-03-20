@@ -32,9 +32,13 @@
     starfin = {
       url = "git+ssh://git@github.com/fluxoz/starfin.git";
     };
+    zeroclaw = {
+      url = "github:fluxoz/zeroclaw";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixvim, nixos-apple-silicon, home-manager, disko, sops-nix, secrets, starfin, ... }:
+  outputs = { self, nixpkgs, nixvim, nixos-apple-silicon, home-manager, disko, sops-nix, secrets, starfin, zeroclaw, ... }:
   let
     secrets-file = "${secrets}/secrets.yaml";
   in {
@@ -72,6 +76,7 @@
           }
           ./hosts/mini          
           nixos-apple-silicon.nixosModules.default
+          zeroclaw.nixosModules.zeroclaw
           sops-nix.nixosModules.sops
           { sops.defaultSopsFile = secrets-file; }
         ];

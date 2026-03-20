@@ -215,6 +215,7 @@ in
     enable = true;
     videoLibraryPath = "/storage/backup/media";
     cacheDir = "/storage/backup/starfin_cache";
+    design = "neubrutalist";
     bindAddr = "0.0.0.0";
     port = 8089;
     user = "murphy";
