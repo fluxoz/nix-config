@@ -76,7 +76,7 @@
           }
           ./hosts/mini          
           nixos-apple-silicon.nixosModules.default
-          zeroclaw.nixosModules.zeroclaw
+          # zeroclaw.nixosModules.zeroclaw
           sops-nix.nixosModules.sops
           { sops.defaultSopsFile = secrets-file; }
         ];
