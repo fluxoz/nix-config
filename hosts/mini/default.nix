@@ -81,14 +81,14 @@ in
     };
   };
 
-  services.zeroclaw = {
-    enable = true;
-    provider = "ollama";
-  };
+  # services.zeroclaw = {
+  #   enable = true;
+  #   provider = "ollama";
+  # };
 
-  services.tailscale = {
-    enable = true;
-  };
+  # services.tailscale = {
+  #   enable = true;
+  # };
   
   services.openssh = {
     enable = true;
