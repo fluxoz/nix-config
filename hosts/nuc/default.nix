@@ -205,7 +205,7 @@ in
     statdPort = 32765;
     lockdPort = 32768;
     exports = ''
-      /storage/jellyfin 192.168.1.0/24(rw,sync,no_subtree_check,root_squash,insecure)
+      /storage/jellyfin 192.168.1.0/24(rw,sync,no_subtree_check,root_squash,insecure,anonuid=997,anongid=500)
       /storage/photos 192.168.1.0/24(rw,sync,no_subtree_check,root_squash,insecure)
       /storage/backup 192.168.1.0/24(rw,sync,no_subtree_check,root_squash,insecure,anonuid=1001,anongid=500)
     '';
@@ -215,8 +215,9 @@ in
     enable = true;
     videoLibraryPath = "/storage/backup/media";
     cacheDir = "/storage/backup/starfin_cache";
-    design = "neubrutalist";
-    bindAddr = "0.0.0.0";
+    # design = "neubrutalist";
+    # devMetrics = true;
+    bindAddr = "127.0.0.1";
     port = 8089;
     user = "murphy";
     group = "storage";

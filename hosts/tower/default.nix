@@ -14,6 +14,7 @@
     ../common/optional/vmware.nix
     ../common/optional/podman.nix
     ../common/optional/local_ca.nix
+    ./windows-vm.nix
   ];
 
   sops = {

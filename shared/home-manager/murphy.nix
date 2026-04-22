@@ -7,6 +7,11 @@
   _module.args.nixvim = nixvim;
 
   home.username = "murphy";
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+
   xresources.properties = if desktopUser then {
     "Xcursor.size" = 12;
     "Xft.dpi" = 110;

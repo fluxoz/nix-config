@@ -12,6 +12,7 @@ in
           aria2 # A lightweight multi-protocol & multi-source command-line download utility
           btop  # replacement of htop/nmon
           cowsay
+          coreutils 
           direnv
           distrobox
           dnsutils  # `dig` + `nslookup`
@@ -43,6 +44,7 @@ in
           ltrace # library call monitoring
           mtr # A network diagnostic tool
           neofetch
+          net-tools
           nh # nix cli helper
           nix-direnv
           nix-direnv

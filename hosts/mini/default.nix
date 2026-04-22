@@ -1,7 +1,20 @@
-{ self, config, pkgs, nixvim, ... }:
+{ self, config, lib, pkgs, nixvim, ... }:
 let
   # Reference the nvim package from the nixvim flake
   nvim = nixvim.packages.x86_64-linux.default;
+  ollama-0_20_1 = pkgs.ollama-vulkan.overrideAttrs (old: {
+    version = "0.20.1";
+    src = pkgs.fetchFromGitHub {
+      owner = "ollama";
+      repo = "ollama";
+      tag = "v0.20.1";
+      hash = "sha256-CfDoP1UJF8vl3CkLg8diwQjtEwDClR4DXc2hXLdm1bo=";
+      fetchSubmodules = true;
+    };
+    proxyVendor = true;
+    vendorHash = "sha256-Lc1Ktdqtv2VhJQssk8K1UOimeEjVNvDWePE9WkamCos=";
+    doCheck = false;
+  });
 in
 
 {
@@ -13,6 +26,7 @@ in
     ../common/optional/local_ca.nix
     ../../shared/home-manager/home-manager.nix
     ./hardware-configuration.nix
+    # ../common/optional/ollama-arm.nix
   ];
   
   sops = {
@@ -85,6 +99,15 @@ in
   #   enable = true;
   #   provider = "ollama";
   # };
+
+  services.ollama = {
+    enable = true;
+    package = ollama-0_20_1;
+    openFirewall = true;
+    host = "0.0.0.0";
+    port = 11434;
+    loadModels = [ "gemma4:e4b"];
+  };
 
   # services.tailscale = {
   #   enable = true;
