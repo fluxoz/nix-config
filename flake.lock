@@ -437,10 +437,10 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1773530897,
-        "narHash": "sha256-8YtLHUmPly+BlRmm0RM0QtJ+I0jqQiV4QnigF7X7gJ8=",
+        "lastModified": 1776833103,
+        "narHash": "sha256-m9walWFuFksY28WZ9qfOeZ92qp0rtvrcF+SohyYxV6o=",
         "ref": "refs/heads/master",
-        "rev": "fbe9d5df55d25261c6fbee1bf075ed32476f7c99",
+        "rev": "84fb3329dbfabf6bd26fac1fa6dcdf3f8894871f",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/fluxoz/nix-secrets.git"
@@ -477,11 +477,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1776655864,
-        "narHash": "sha256-YT15iDNBsb7v8hBHkK2ZElJgtG5UDWAoSApdqUdoehI=",
+        "lastModified": 1777345166,
+        "narHash": "sha256-789pq7PDGAxnYIgB+QIwwJNWaCWiBhnZe9riKxwrPNU=",
         "ref": "refs/heads/master",
-        "rev": "7178515ffabb0e4e85051af77ab36eaf915a04e4",
-        "revCount": 452,
+        "rev": "6ae2118424f6ed9538d1638548fa3a431ba371b0",
+        "revCount": 466,
         "type": "git",
         "url": "ssh://git@github.com/fluxoz/starfin.git"
       },

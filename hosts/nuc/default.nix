@@ -215,6 +215,7 @@ in
     enable = true;
     videoLibraryPath = "/storage/backup/media";
     cacheDir = "/storage/backup/starfin_cache";
+    cacheStrategy = "aggressive";
     # design = "neubrutalist";
     # devMetrics = true;
     bindAddr = "127.0.0.1";

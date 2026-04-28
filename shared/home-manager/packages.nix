@@ -60,6 +60,7 @@ in
           ripgrep # recursively searches directories for a regex pattern
           rust-analyzer
           simple-http-server
+          ssh-to-age
           socat # replacement of openbsd-netcat
           strace # system call monitoring
           sysstat

@@ -4,6 +4,7 @@
     ../../shared/home-manager/home-manager.nix
     ./hardware-configuration.nix
     ../common/core
+    ../common/core/nixos.nix
     ../common/optional/bluetooth.nix
     ../common/optional/xbox-controller.nix
     ../common/optional/desktop-environments/plasma.nix

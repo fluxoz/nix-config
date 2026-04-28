@@ -1,7 +1,6 @@
-{ config, lib, nixvim, pkgs, ... }:
+{ self, config, lib, nixvim, pkgs, ... }:
 
 let
-  inherit (config.disko.devices.disk) bootdisk;  # optional, for referencing devices
   nvim = nixvim.packages.x86_64-linux.default;
 in
 {
@@ -10,13 +9,15 @@ in
     ./disks.nix   
   ];
 
-  # === Boot configuration for linear mdadm + LVM on old BIOS server ===
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev";                    # BIOS mode (not EFI)
-    devices = [                          # Install GRUB to EVERY physical disk for best chance of booting
-      bootdisk.device
-    ];
+  sops = {
+    secrets = {
+      "passwords/server/murphy" = {
+        neededForUsers = true;
+      };
+      "passwords/server/root" = {
+        neededForUsers = true;
+      };
+    };
   };
 
   # Critical: make sure the linear mdadm array and LVM activate very early in initrd
@@ -32,7 +33,7 @@ in
     settings.PermitRootLogin = "prohibit-password";  # or "yes" if you prefer
   };
 
-  users = { 
+  users.users = { 
     root = {
       hashedPasswordFile = config.sops.secrets."passwords/server/root".path;
       openssh.authorizedKeys.keyFiles = [ 

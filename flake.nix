@@ -106,7 +106,26 @@
           starfin.nixosModules.default
         ];
       };
+
+      server = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit self;
+          inherit disko;
+          inherit nixvim;
+          inherit (nixpkgs) lib;
+          homeManagerModule = home-manager.nixosModules.home-manager;
+        };
+        system = "x86_64-linux";
+        modules = [
+          {
+            home-manager.desktopUser = false;
+          }
+          disko.nixosModules.disko
+          ./hosts/server          
+          sops-nix.nixosModules.sops
+          { sops.defaultSopsFile = secrets-file; }
+        ];
+      };
     };
   };
 }
-

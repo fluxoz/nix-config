@@ -133,6 +133,7 @@ in
     nvim
     qemu
     clinfo
+    gemini-cli
   ];
   system.stateVersion = "25.11"; 
 }

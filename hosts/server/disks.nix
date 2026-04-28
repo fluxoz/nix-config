@@ -85,7 +85,7 @@ in
     mdadm = {
       bigbucket = {
         type = "mdadm";
-        level = "linear";                 # This is the key: linear, not raid1 or raid0
+        level = -1;                 # This is the key: linear, not raid1 or raid0
         metadata = "1.2";
         content = {
           type = "lvm_pv";
